@@ -1,0 +1,31 @@
+download:
+  url:      https://github.com/des-science/mw-sats
+  release:  v1.0
+  filename: mw-sats-data.tar.gz
+
+datadir : 'data/'
+desy6:
+  model   : 'classifier_stellar_desy6_v0.model'
+  mask    : 'desy6_mask_v2.0.fits.gz'
+  density : 'desy6_stellar_density_r22_n128_v0.fits.gz'
+delvedr3: 
+  model   : 'classifier_stellar_delvedr3_v0.model'
+  mask    : 'delvedr3_mask_v2.0.fits.gz'
+  density : 'delvedr3_stellar_density_r22_n128_v0.fits.gz'
+ps1d: 
+  model   : 'classifier_stellar_ps1_v13.0.1.model'
+  mask    : 'ps1d_mask_v2.0.fits.gz'
+  density : 'ps1_stellar_density_r22_equ_n128_v0.fits'
+
+maskbits : 
+    GOOD   : 0b000000000 # No flags
+    DWARF4 : 0b000000001 # near known dwarf (type2 >= 4)
+    DWARF3 : 0b000000010 # near known dwarf (type2 == 3)
+    DWARF2 : 0b000000100 # near known dwarf (type2 == 2)
+    ASSOC  : 0b000001000 # near object in catalogs (excluding DWARFs)
+    STAR   : 0b000010000 # near bright star
+    EBV    : 0b000100000 # E(B-V) > 0.2
+    FOOT   : 0b001000000 # outside of footprint
+    FAIL   : 0b010000000 # location of failure in ugali PS1 processing
+    ART    : 0b100000000 # location of artifact in PS1 footprint
+    
