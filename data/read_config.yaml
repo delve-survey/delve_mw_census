@@ -29,3 +29,11 @@ maskbits :
     FAIL   : 0b010000000 # location of failure in ugali PS1 processing
     ART    : 0b100000000 # location of artifact in PS1 footprint
     
+maskbits : 
+    DWARF  : 0b00000100 # near known dwarf and ambigous systems (Pace24) 
+    ASSOC  : 0b00001000 # near object in catalogs (excluding known dwarfs)  
+    STAR   : 0b00010000 # near bright star
+    EBV    : 0b00010000 # Galactic Plane Extinction : E(B-V) > 0.2
+    DENSITY: 0b00100000 # Galactic Plane Stellar Density : rho> 8 stars arcmin^-2
+    FOOT   : 0b10000000 # No coverage
+    

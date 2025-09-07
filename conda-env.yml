@@ -1,0 +1,13 @@
+name: astropy310
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10.18
+  - numpy==1.26.4
+  - pandas==2.3.1  
+  - matplotlib=3.10.0
+  - xgboost==3.0.1
+  - yaml=0.2.5
+  - healpy==1.18.1
+  - astropy=6.1.4
+  - corner=2.2.2
